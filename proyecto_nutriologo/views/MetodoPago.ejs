@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metodo de pago</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- heard -->
+    <header>
+      <img class="m-auto d-flex" id="logo" src="img/logocuadrado.png" alt="" />
+    </header>
+    <header class="p-3 mb-3 border-bottom sticky-lg-top">
+      <div class="container-fluid">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-end justify-content-lg-start"
+        >
+          <div class="dropdown">
+            <button
+              class="btn btn-write text-dark"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              <i class="bi bi-list logo"></i>
+            </button>
+          </div>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="/index" class="nav-link px-2 link-dark"
+                ><botton class="btn btn-outline-dark sinborde">Home</botton></a
+              >
+            </li>
+            <li>
+              <a href="/DarConsultas" class="nav-link px-2 link-dark"
+                ><button class="btn btn-outline-dark sinborde">
+                  Dar Consulta
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="/Informacion" class="nav-link px-2 link-dark"
+                ><button class="btn btn-outline-dark sinborde">
+                  ¿Quienes somos?
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="/contacto" class="nav-link px-2 link-dark"
+                ><button class="btn btn-outline-dark sinborde">
+                  Contactanos
+                </button></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-block link-dark text-decoration-none dropdown-toggle btn"
+                id="dropdownUser1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </a>
+              <ul
+                class="dropdown-menu text-small"
+                aria-labelledby="dropdownUser1"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/SesionAbierta/Consultas/Confirmacion.html"
+                    ><i class="bi bi-broadcast"></i> Tienes una nueva
+                    Consulta</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/SesionAbierta/inbox/Mensajeria.html"
+                    ><i class="bi bi-envelope"></i> Tienes un mensaje nuevo</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/SesionAbierta/Reportes/transaciones.html"
+                    ><i class="bi bi-check-circle-fill"></i> Transferencia
+                    exitosa</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser12"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://github.com/mdo.png"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small"
+              aria-labelledby="dropdownUser12"
+            >
+              <li>
+                <a class="dropdown-item" href="/CuentaBancario"
+                  >Cuenta Bancaria</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/configuraciones"
+                  >Configuraciones</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="/Informacionl">Perfil</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Cerrar sesion</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- heard -->
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+
+    <div class="container">
+      <h3 class="text-dark mb-4">Métodos de pago</h3>
+      <div class="row mb-3 ">
+        <div class="col-lg-4 ">
+          <div class="card mb-3 ">
+            <!-- cuadro agregar tarjeta-->
+            <div class="card shadow ">
+              <div class="card-header py-3">
+                <h6 class="text-primary fw-bold m-0">Agregar Cuenta</h6>
+              </div>
+              <div class="card-body" id="MetodoPago">
+                <form action="/MetodoPago" method="post">
+                <!--  -->
+                <div class="mb-3">
+                  <label for="tarjeta" class="form-label">Tarjeta</label>
+                  <input id="tarjeta" name="tarjeta" type="text" class="form-control">
+                </div>
+                <!--  -->
+                <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input id="fecha" name="fecha" type="text" class="form-control">
+                </div>
+                <!--  -->
+                <div class="mb-3">
+                <label for="cvv" class="form-label">cvv</label>
+                <input id="cvv" name="cvv" type="text" class="form-control">
+                </div>
+                  <hr />
+                  <button
+                    class="btn btn-primary btn-sm"
+                    type="submit"
+                    style="margin-left: -6px; margin-right: 13px"
+                  >
+                    Agregar</button
+                  ><button
+                    class="btn btn-danger btn-sm text-center"
+                    type="submit"
+                    onclick="borrar();"
+                  >
+                    Borrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <!--cuadro de busquedas-->
+              <h6 class="text-primary fw-bold m-0">Buscar tarjeta</h6>
+            </div>
+            <div class="card-body">
+              <form
+                class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
+                role="search"
+              >
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="text-primary fw-bold m-0">Compras</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Tarjeta</th>
+                      <th>Cantidad</th>
+                      <th>Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>8973</td>
+                      <td>1001</td>
+                      <td>10/06/2022</td>
+                    </tr>
+                    <tr>
+                      <td>8973<br /></td>
+                      <td>1002</td>
+                      <td>10/06/2022<br /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="btn btn-success btn-sm" type="button">
+                Ver mas
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row mb-3 d-none">
+            <div class="col">
+              <div class="card text-white bg-primary shadow">
+                <div class="card-body">
+                  <div class="row mb-2">
+                    <div class="col">
+                      <p class="m-0">Peformance</p>
+                      <p class="m-0"><strong>65.2%</strong></p>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rocket fa-2x"></i>
+                    </div>
+                  </div>
+                  <p class="text-white-50 small m-0">
+                    <i class="fas fa-arrow-up"></i> 5% since last month
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-white bg-success shadow">
+                <div class="card-body">
+                  <div class="row mb-2">
+                    <div class="col">
+                      <p class="m-0">Peformance</p>
+                      <p class="m-0"><strong>65.2%</strong></p>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rocket fa-2x"></i>
+                    </div>
+                  </div>
+                  <p class="text-white-50 small m-0">
+                    <i class="fas fa-arrow-up"></i> 5% since last month
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!--  -->
+            <div class="col Contenedorpadrecuentabancaria"></div>
+            <% results.forEach((user)=>{ %>
+              <div class="card shadow mb-3">
+                <div class="card-header py-3">
+                  <p class="text-dark m-0 fw-bold">Tarjeta</p>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <i class="bi bi-credit-card-fill"></i>
+                      </div>
+                      <div class="col">
+                        <div class="mb-3">
+                          <label class="form-label" for="username"
+                            ><strong>Numero de tarjeta</strong></label
+                          >
+                        </div>
+                        <label
+                          class="form-label"
+                          style="
+                            padding-bottom: 0px;
+                            margin-bottom: 3px;
+                            padding-top: 0px;
+                            margin-top: -1px;
+                          "
+                          ><%= user.tarjeta %></label
+                        >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-3">
+                          <label class="form-label" for="first_name"
+                            ><strong>Fecha de vencimiento</strong></label
+                          >
+                        </div>
+                        <label class="form-label"><%= user.fecha %></label>
+                      </div>
+                      <div class="col">
+                        <div class="mb-3">
+                          <label class="form-label" for="last_name"
+                            ><strong>Id tarjeta</strong></label
+                          >
+                        </div>
+                        <label class="form-label"><%= user.id %></label>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <a href="/deletetarjeta/<%= user.id %>"><button class="btn btn-danger btn-sm" type="button">
+                        Eliminar</button
+                      ></a>
+                      <button
+                        class="btn btn-primary btn-sm"
+                        type="button"
+                        style="margin-left: 29px"
+                        data-bs-toggle="modal"
+                        data-bs-target="#am"
+                      >
+                        Editar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <% }) %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+    <!--Comienzo se complemento-->
+    <!--menu-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <img class="w-75 m-auto" src="img/logocuadrado.png" alt="" />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr class="h-color mx-3" />
+      <div class="offcanvas-body">
+        <form class="d-flex mb-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a
+              href="/index"
+              class="link-dark d-inline-flex text-decoration-none rounded amor"
+              ><i class="bi bi-house-door-fill"></i>Home</a
+            >
+          </li>
+
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-speedometer2"></i></div>
+              Reportes
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/rganancias"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-bank2"></i>
+                    <div class="m-1"></div>
+                    Ganancias</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rcliente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-people-fill"></i>
+                    <div class="m-1"></div>
+                    Clientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rconsulta"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-clipboard2-pulse-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-inbox-fill"></i></div>
+              Inbox
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-chat-dots-fill"></i>
+                    <div class="m-1"></div>
+                    Mensajes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-rss-fill"></i>
+                    <div class="m-1"></div>
+                    Social feed</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contacto"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-question-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Chat de ayuda</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-clipboard-heart"></i></div>
+              Consultas
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/confirmacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-check-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Confirmacion</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pendiente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-calendar-week-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas pendientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Cancelaciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-x-square-fill"></i>
+                    <div class="m-1"></div>
+                    Cancelaciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="DarConsultas"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-megaphone-fill"></i>
+                    <div class="m-1"></div>
+                    Dar Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea11"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-cart-plus-fill"></i></div>
+              payment
+            </button>
+            <div class="collapse" id="orders-collapsea11">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/MetodoPago"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card-fill"></i>
+                    <div class="m-1"></div>
+                    Metodo de pago</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/CuentaBancario"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-wallet2"></i>
+                    <div class="m-1"></div>
+                    Cuenta bancaria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Retirar"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card"></i>
+                    <div class="m-1"></div>
+                    Retiro de Efectivo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-bookmark-heart-fill"></i></div>
+              premium
+            </button>
+            <div class="collapse" id="orders-collapsea">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-basket2"></i>
+                    <div class="m-1"></div>
+                    Promociones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-cart-plus"></i>
+                    <div class="m-1"></div>
+                    Planes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-info-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Informacion</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-person-fill"></i></div>
+              Cuenta
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/Informacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-person-lines-fill"></i>
+                    <div class="m-1"></div>
+                    Perfil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/configuraciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-gear-fill"></i>
+                    <div class="m-1"></div>
+                    Configuraciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/paginaprincipal"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-box-arrow-right"></i>
+                    <div class="m-1"></div>
+                    Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3 text-center"></li>
+          <div class="text-center mb-2">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              >Reportar problema</a
+            >
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-warning">
+              <a
+                class="link-dark d-inline-flex text-decoration-none rounded"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Cerrar sesion</a
+              >
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+   <!--footer-->
+   <div class="container">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-5 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+        >
+        </a>
+        <span class="mb-3 mb-md-0 text-muted"
+          >© 2022 Desarrollado por <strong class="text-dark">Argel Alberto Cano Morales</strong><img src="img/logopersonal.png" height="24" /></span
+        >
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <!-- Modal Salir sesion -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">¿Seguro que quieres salir?</div>
+        <div class="modal-footer">
+          <a href="logout"
+            ><button type="button" class="btn btn-secondary">Salir</button></a
+          >
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Reporte -->
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">
+              Reportar problemas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Correo</label
+                >
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Drescripcion:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Terminacion se complemento-->
+
+    <!-- srippt inicio -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/boststrap.min.js"></script>
+    <script src="js/metodopago.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script finalizo -->
+  </body>
+</html>

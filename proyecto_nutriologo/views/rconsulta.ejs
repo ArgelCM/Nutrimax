@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reportes Consulta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- heard -->
+    <header><img class="m-auto d-flex" id="logo" src="img/logocuadrado.png" alt=""></header>
+    <header class="p-3 mb-3 border-bottom sticky-lg-top">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap align-items-center justify-content-end justify-content-lg-start">
+            <div class="dropdown">
+                <button class="btn  btn-write text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list logo"></i></button>
+              </div>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/index" class="nav-link px-2 link-dark"><botton class="btn btn-outline-dark sinborde">Home</botton></a></li>
+              <li><a href="/DarConsultas" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">Dar Consulta</button></a></li>
+              <li><a href="/Informacion" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">¿Quienes somos?</button></a></li>
+              <li><a href="/contacto" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">Contactanos</button></a></li>
+              <li><a href="#" class="d-block link-dark text-decoration-none dropdown-toggle btn  " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell-fill"></i>
+              </a>
+              <ul class="dropdown-menu text-small " aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/Consultas/Confirmacion.html"><i class="bi bi-broadcast"></i> Tienes una nueva Consulta</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/inbox/Mensajeria.html"><i class="bi bi-envelope"></i> Tienes un mensaje nuevo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/Reportes/transaciones.html"><i class="bi bi-check-circle-fill"></i> Transferencia exitosa</a></li>
+              </ul></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser12" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser12">
+                <li><a class="dropdown-item" href="/CuentaBancario">Cuenta Bancaria</a></li>
+                <li><a class="dropdown-item" href="/configuraciones">Configuraciones</a></li>
+                <li><a class="dropdown-item" href="/Informacionl">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Cerrar sesion</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- heard -->
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+
+    <h1 class="text-center mb-5">Reportes Clientes</h1>
+    <!-- cuadros-->
+    <div class="row container m-auto mb-5">
+      <!-- Earnings (Monthly) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                >
+                  Earnings (Monthly)
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  $40,000
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earnings (Annual) Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                >
+                  Earnings (Annual)
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  $215,000
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tasks Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                >
+                  Tasks
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                      50%
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="progress progress-sm mr-2">
+                      <div
+                        class="progress-bar bg-info"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pending Requests Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                >
+                  Pending Requests
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-comments fa-2x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--tabla1-->
+    <div class="container table-responsive">
+      <table
+        class="container table table-hover text-nowrap m-auto mb-5 bg-light rounded-3"
+      >
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Product Detail Views</th>
+            <th scope="col">Unique Purchases</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Product Revenue</th>
+            <th scope="col">Avg. Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Value</th>
+            <td>18,492</td>
+            <td>228</td>
+            <td>350</td>
+            <td>$4,787.64</td>
+            <td>$13.68</td>
+          </tr>
+          <tr>
+            <th scope="row">Percentage change</th>
+            <td>
+              <span class="text-danger">
+                <i class="fas fa-caret-down me-1"></i><span>-48.8%%</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>14.0%</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>46.4%</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>29.6%</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-danger">
+                <i class="fas fa-caret-down me-1"></i><span>-11.5%</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Absolute change</th>
+            <td>
+              <span class="text-danger">
+                <i class="fas fa-caret-down me-1"></i><span>-17,654</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>28</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>111</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-success">
+                <i class="fas fa-caret-up me-1"></i><span>$1,092.72</span>
+              </span>
+            </td>
+            <td>
+              <span class="text-danger">
+                <i class="fas fa-caret-down me-1"></i><span>$-1.78</span>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--tabla1-->
+    <!--tabla2-->
+
+    <div class="container">
+      <h3 class="text-dark mb-4">Reporte clientes</h3>
+      <div class="card shadow">
+        <div class="card-header py-3">
+          <p class="text-primary m-0 fw-bold">Informacion clientes</p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6 text-nowrap">
+              <div
+                id="dataTable_length"
+                class="dataTables_length"
+                aria-controls="dataTable"
+              >
+                <label class="form-label"
+                  >Show <select
+                    class="d-inline-block form-select form-select-sm"
+                  >
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select></label
+                >
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="dataTable_filter" class="text-md-end dataTables_filter">
+                <label class="form-label"
+                  ><input
+                    class="form-control form-control-sm"
+                    type="search"
+                    aria-controls="dataTable"
+                    placeholder="Search"
+                /></label>
+              </div>
+            </div>
+          </div>
+          <div
+            id="dataTable"
+            class="table-responsive table mt-2"
+            role="grid"
+            aria-describedby="dataTable_info"
+          >
+            <table id="dataTable" class="table my-0">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1001</td>
+                  <td>60</td>
+                  <td>1.60</td>
+                  <td>22</td>
+                  <td>Adecuado</td>
+                  <td>22</td>
+                  <td>Positivo</td>
+                  <td>
+                    <a
+                      href="/error404"
+                      class="bi bi-eye-fill"
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1001</td>
+                  <td>60</td>
+                  <td>1.60</td>
+                  <td>22</td>
+                  <td>Adecuado</td>
+                  <td>22</td>
+                  <td>Positivo</td>
+                  <td>
+                    <a
+                      href="/error404"
+                      class="bi bi-eye-fill"
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1001</td>
+                  <td>60</td>
+                  <td>1.60</td>
+                  <td>22</td>
+                  <td>Adecuado</td>
+                  <td>22</td>
+                  <td>Positivo</td>
+                  <td>
+                    <a
+                      href="/error404"
+                      class="bi bi-eye-fill"
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1001</td>
+                  <td>60</td>
+                  <td>1.60</td>
+                  <td>22</td>
+                  <td>Adecuado</td>
+                  <td>22</td>
+                  <td>Positivo</td>
+                  <td>
+                    <a
+                      href="/error404"
+                      class="bi bi-eye-fill"
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                        alt=""
+                        style="width: 45px; height: 45px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1001</td>
+                  <td>60</td>
+                  <td>1.60</td>
+                  <td>22</td>
+                  <td>Adecuado</td>
+                  <td>22</td>
+                  <td>Positivo</td>
+                  <td>
+                    <a
+                      href="/error404"
+                      class="bi bi-eye-fill"
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th scope="col">Nombre del cliente</th>
+                  <th scope="col">Numero de Cliente</th>
+                  <th scope="col">peso</th>
+                  <th scope="col">Estatura</th>
+                  <th scope="col">IMC</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Progreso</th>
+                  <th scope="col">Visualizar</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-md-6 align-self-center">
+              <p
+                id="dataTable_info"
+                class="dataTables_info"
+                role="status"
+                aria-live="polite"
+              >
+                Showing 1 to 10 of 27
+              </p>
+            </div>
+            <div class="col-md-6">
+              <nav
+                class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers"
+              >
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" aria-label="Previous" href="#"
+                      ><span aria-hidden="true">«</span></a
+                    >
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" aria-label="Next" href="#"
+                      ><span aria-hidden="true">»</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--tabla2-->
+    <!--botones-->
+    <div class="container py-5">
+      <div class="mx-auto" style="max-width: 900px">
+        <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+          <div class="col mb-4">
+            <div class="card bg-primary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-primary card-text mb-2">
+                  Reportes de Ganancias
+                </p>
+                <h5 class="fw-bold card-title mb-3">
+                  Lorem ipsum dolor sit nullam et quis ad cras porttitor
+                </h5>
+                <a href="/rganancias"
+                  ><button class="btn btn-primary btn-sm" type="button">
+                    Ganancias
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card bg-secondary-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-secondary card-text mb-2">
+                  Reporte de Transaciones
+                </p>
+                <h5 class="fw-bold card-title mb-3">
+                  Lorem ipsum dolor sit nullam et quis ad cras porttitor
+                </h5>
+                <a href="/error404"
+                  ><button class="btn btn-secondary btn-sm" type="button">
+                    Transaciones
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="card bg-info-light">
+              <div class="card-body text-center px-4 py-5 px-md-5">
+                <p class="fw-bold text-info card-text mb-2">
+                  Reporte de Consulas
+                </p>
+                <h5 class="fw-bold card-title mb-3">
+                  Lorem ipsum dolor sit nullam et quis ad cras porttitor
+                </h5>
+                <a href="/rconsulta"
+                  ><button class="btn btn-info btn-sm text-white" type="button">
+                    Consultas
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+    <!--Comienzo se complemento-->
+    <!--menu-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <img class="w-75 m-auto" src="img/logocuadrado.png" alt="" />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr class="h-color mx-3" />
+      <div class="offcanvas-body">
+        <form class="d-flex mb-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a
+              href="/index"
+              class="link-dark d-inline-flex text-decoration-none rounded amor"
+              ><i class="bi bi-house-door-fill"></i>Home</a
+            >
+          </li>
+
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-speedometer2"></i></div>
+              Reportes
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/rganancias"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-bank2"></i>
+                    <div class="m-1"></div>
+                    Ganancias</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rcliente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-people-fill"></i>
+                    <div class="m-1"></div>
+                    Clientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rconsulta"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-clipboard2-pulse-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-inbox-fill"></i></div>
+              Inbox
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-chat-dots-fill"></i>
+                    <div class="m-1"></div>
+                    Mensajes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-rss-fill"></i>
+                    <div class="m-1"></div>
+                    Social feed</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contacto"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-question-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Chat de ayuda</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-clipboard-heart"></i></div>
+              Consultas
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/confirmacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-check-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Confirmacion</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pendiente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-calendar-week-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas pendientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Cancelaciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-x-square-fill"></i>
+                    <div class="m-1"></div>
+                    Cancelaciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="DarConsultas"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-megaphone-fill"></i>
+                    <div class="m-1"></div>
+                    Dar Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea11"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-cart-plus-fill"></i></div>
+              payment
+            </button>
+            <div class="collapse" id="orders-collapsea11">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/MetodoPago"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card-fill"></i>
+                    <div class="m-1"></div>
+                    Metodo de pago</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/CuentaBancario"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-wallet2"></i>
+                    <div class="m-1"></div>
+                    Cuenta bancaria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Retirar"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card"></i>
+                    <div class="m-1"></div>
+                    Retiro de Efectivo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-bookmark-heart-fill"></i></div>
+              premium
+            </button>
+            <div class="collapse" id="orders-collapsea">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-basket2"></i>
+                    <div class="m-1"></div>
+                    Promociones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-cart-plus"></i>
+                    <div class="m-1"></div>
+                    Planes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-info-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Informacion</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-person-fill"></i></div>
+              Cuenta
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/Informacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-person-lines-fill"></i>
+                    <div class="m-1"></div>
+                    Perfil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/configuraciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-gear-fill"></i>
+                    <div class="m-1"></div>
+                    Configuraciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/paginaprincipal"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-box-arrow-right"></i>
+                    <div class="m-1"></div>
+                    Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3 text-center"></li>
+          <div class="text-center mb-2">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              >Reportar problema</a
+            >
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-warning">
+              <a
+                class="link-dark d-inline-flex text-decoration-none rounded"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Cerrar sesion</a
+              >
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+   <!--footer-->
+   <div class="container">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-5 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+        >
+        </a>
+        <span class="mb-3 mb-md-0 text-muted"
+          >© 2022 Desarrollado por <strong class="text-dark">Argel Alberto Cano Morales</strong><img src="img/logopersonal.png" height="24" /></span
+        >
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <!-- Modal Salir sesion -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">¿Seguro que quieres salir?</div>
+        <div class="modal-footer">
+          <a href="logout"
+            ><button type="button" class="btn btn-secondary">Salir</button></a
+          >
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal Reporte -->
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">
+              Reportar problemas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Correo</label
+                >
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Drescripcion:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Terminacion se complemento-->
+
+    <!-- srippt inicio -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/boststrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script finalizo -->
+  </body>
+</html>

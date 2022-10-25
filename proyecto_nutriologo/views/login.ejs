@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>Login</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body class>
+        <!--header-->
+        <header>
+          <img
+            class="m-auto d-flex"
+            id="logo"
+            src="img/logocuadrado.png"
+            alt=""
+          />
+        </header>
+    
+        <header class="p-3 mb-3 border-bottom sticky-lg-top">
+          <div class="">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-end justify-content-lg-start"
+            >
+              <div class="dropdown">
+                <button
+                  class="btn btn-write text-dark"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  <i class="bi bi-list logo"></i>
+                </button>
+              </div>
+              <ul
+                class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+              >
+                <li>
+                  <a href="/paginaprincipal" class="nav-link px-2"
+                    ><button class="btn btn-outline-dark sinborde">Home</button></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error"
+                    class="nav-link px-2"
+                    ><button class="btn btn-outline-dark sinborde">
+                      ¿Quienes somos?
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error"
+                    class="nav-link px-2"
+                    ><button class="btn btn-outline-dark sinborde">
+                      Contactanos
+                    </button></a
+                  >
+                </li>
+              </ul>
+              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Buscar..."
+                  aria-label="Search"
+                />
+              </form>
+    
+              <div class="text-end">
+                <a
+                  class="link-dark d-inline-flex text-decoration-none rounded"
+                  href="/login"
+                  ><button type="button" class="btn btn-outline-dark me-2">
+                    Iniciar Sesion
+                  </button></a
+                >
+                <a
+                  class="link-dark d-inline-flex text-decoration-none rounded"
+                  href="/register"
+                  ><button type="button" class="btn btn-warning">
+                    Registrate
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <!--header-->
+    <!-- contenido -->
+<main class="form-signin text-center shadow-lg p-3 mb-5 mt-5">
+
+  <form id="formLogin" action="/login" method="POST"> 
+    <img class="mb-4" src="img/logocuadrado.png" alt="" width="172" >
+    <div class="form-floating">
+      <input type="text" class="form-control" id="user" name="user" placeholder="User">
+      <label for="user">User</label>
+    </div>
+    <div class="form-floating mt-2">
+      <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+      <label for="pass">Password</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-danger" type="submit">Login</button>    
+  </form>
+
+
+  <a href="/register" type="button" class="w-100 btn btn-lg btn-secondary mt-1">Registrarse</a>
+</main>
+<!-- contenido -->
+    <!--menu-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <img class="logo" src="/assets/img/logocuadrado.png" alt="" />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr class="h-color mx-3" />
+      <div class="offcanvas-body">
+        <form class="d-flex mb-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a
+              href="/index.html"
+              class="link-dark d-inline-flex text-decoration-none rounded amor mb-2"
+              ><i class="bi bi-house-door-fill"></i>
+              <div class="m-1"></div>
+              Home</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="/pages/Sesion Cerrada/pages/soporte.html"
+              class="link-dark d-inline-flex text-decoration-none rounded amor"
+              ><i class="bi bi-chat-left-text"></i>
+              <div class="m-1"></div>
+              Soporte Tecnico</a
+            >
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-bookmark-heart-fill"></i></div>
+              premium
+            </button>
+            <div class="collapse" id="orders-collapsea">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/pages/Sesion Cerrada/premium/Promociones.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-basket2"></i>
+                    <div class="m-1"></div>
+                    Promociones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/Sesion Cerrada/premium/Planes.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-cart-plus"></i>
+                    <div class="m-1"></div>
+                    Planes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/Sesion Cerrada/premium/Acercanosotros.html"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-info-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Informacion</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <div class="text-center mb-2">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              >Reportar problema</a
+            >
+          </div>
+          <div class="text-center">
+            <a
+              class="link-dark d-inline-flex text-decoration-none rounded"
+              href="/pages/Sesion Cerrada/pages/iniciosesion.html"
+              ><button type="button" class="btn btn-outline-dark me-2">
+                Iniciar Sesion
+              </button></a
+            >
+            <a
+              class="link-dark d-inline-flex text-decoration-none rounded"
+              href="/pages/Sesion Cerrada/pages/Regristro.html"
+              ><button type="button" class="btn btn-warning">
+                Registrate
+              </button></a
+            >
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!--menu-->
+   <!--footer-->
+   <div class="container">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-5 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+        >
+        </a>
+        <span class="mb-3 mb-md-0 text-muted"
+          >© 2022 Desarrollado por <strong class="text-dark">Argel Alberto Cano Morales</strong><img src="img/logopersonal.png" height="24" /></span
+        >
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"><i class="bi bi-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <!-- Modal Salir sesion -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">¿Seguro que quieres salir?</div>
+        <div class="modal-footer">
+          <a href="logout"
+            ><button type="button" class="btn btn-secondary">Salir</button></a
+          >
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal Reporte -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header ">
+        <h5 class="modal-title" id="exampleModalLabel2">Reportar problemas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+        <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Correo</label>
+            <input type="text" class="form-control" id="recipient-name">
+        </div>
+        <div class="mb-3">
+            <label for="message-text" class="col-form-label">Drescripcion:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+        </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+    </div>
+    </div>
+</div>
+</div>
+<!-- Modal Reporte -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <% if(alert) { %>
+    <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text:'<%= alertMessage %>',
+        icon:'<%= alertIcon %>',
+        showConfirmButton: <%= showConfirmButton %>,
+        timer: <%= timer %>
+      }).then(()=>{
+        window.location = '/<%= ruta %>'
+      })
+    </script>
+  <% } %>
+
+  </body>
+</html>

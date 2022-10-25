@@ -1,0 +1,57 @@
+/* Estilos boton color lila */
+.btn-bd-primary{font-weight:600;color:#fff;background-color:#7952b3;border-color:#7952b3}
+.btn-bd-primary:hover,.btn-bd-primary:active{color:#fff;background-color:#61428f;border-color:#61428f}
+.btn-bd-primary:focus{box-shadow:0 0 0 3px rgba(121,82,179,0.25)}
+
+.amor
+{
+    margin-left: 8%;
+}
+.logo
+{
+
+    height: 150px;
+}
+
+#logo
+{
+    height: 100px;
+}
+.bg
+{
+ background-image: url(/assets/img/nutriologo.jpg);
+ background-position: center center;
+}
+header
+{
+    background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+body
+{
+    background-color: #ebebeb;
+}
+.bgb
+{
+    background-color: #ffffff9c;
+}
+.bagb
+{
+    background-color: #5750509c;
+}
+.priedra
+{
+    max-width: 30%;
+}
+.sinborde
+{
+    border: none;
+
+}
+.cuadro
+{
+    height: 3000px;
+}

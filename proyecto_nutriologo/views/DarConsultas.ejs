@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consultas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- heard -->
+    <header><img class="m-auto d-flex" id="logo" src="img/logocuadrado.png" alt=""></header>
+    <header class="p-3 mb-3 border-bottom sticky-lg-top">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap align-items-center justify-content-end justify-content-lg-start">
+            <div class="dropdown">
+                <button class="btn  btn-write text-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list logo"></i></button>
+              </div>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/index" class="nav-link px-2 link-dark"><botton class="btn btn-outline-dark sinborde">Home</botton></a></li>
+              <li><a href="/DarConsultas" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">Dar Consulta</button></a></li>
+              <li><a href="/Informacion" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">¿Quienes somos?</button></a></li>
+              <li><a href="/contacto" class="nav-link px-2 link-dark"><button class="btn btn-outline-dark sinborde">Contactanos</button></a></li>
+              <li><a href="#" class="d-block link-dark text-decoration-none dropdown-toggle btn  " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell-fill"></i>
+              </a>
+              <ul class="dropdown-menu text-small " aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/Consultas/Confirmacion.html"><i class="bi bi-broadcast"></i> Tienes una nueva Consulta</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/inbox/Mensajeria.html"><i class="bi bi-envelope"></i> Tienes un mensaje nuevo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/pages/SesionAbierta/Reportes/transaciones.html"><i class="bi bi-check-circle-fill"></i> Transferencia exitosa</a></li>
+              </ul></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser12" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser12">
+                <li><a class="dropdown-item" href="/CuentaBancario">Cuenta Bancaria</a></li>
+                <li><a class="dropdown-item" href="/configuraciones">Configuraciones</a></li>
+                <li><a class="dropdown-item" href="/Informacionl">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Cerrar sesion</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- heard -->
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+
+
+    <div class="container">
+      <h3 class="text-dark mb-4">Dar Consultas</h3>
+      <div class="row mb-3">
+          <div class="col-lg-4">
+              <div class="card mb-3">
+                  <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="img/perfil.jpg" width="160" height="160" />
+                      <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Contactar</button></div>
+                  </div>
+              </div>
+              <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                      <h6 class="text-primary fw-bold m-0">progreso</h6>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="small fw-bold">Server migration<span class="float-end">20%</span></h4>
+                      <div class="progress progress-sm mb-3">
+                          <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="visually-hidden">20%</span></div>
+                      </div>
+                      <h4 class="small fw-bold">Sales tracking<span class="float-end">40%</span></h4>
+                      <div class="progress progress-sm mb-3">
+                          <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="visually-hidden">40%</span></div>
+                      </div>
+                      <h4 class="small fw-bold">Customer Database<span class="float-end">60%</span></h4>
+                      <div class="progress progress-sm mb-3">
+                          <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="visually-hidden">60%</span></div>
+                      </div>
+                      <h4 class="small fw-bold">Payout Details<span class="float-end">80%</span></h4>
+                      <div class="progress progress-sm mb-3">
+                          <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="visually-hidden">80%</span></div>
+                      </div>
+                      <h4 class="small fw-bold">Account setup<span class="float-end">Complete!</span></h4>
+                      <div class="progress progress-sm mb-3">
+                          <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="visually-hidden">100%</span></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-8">
+              <div class="row mb-3 d-none">
+                  <div class="col">
+                      <div class="card text-white bg-primary shadow">
+                          <div class="card-body">
+                              <div class="row mb-2">
+                                  <div class="col">
+                                      <p class="m-0">Peformance</p>
+                                      <p class="m-0"><strong>65.2%</strong></p>
+                                  </div>
+                                  <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                              </div>
+                              <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i> 5% since last month</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card text-white bg-success shadow">
+                          <div class="card-body">
+                              <div class="row mb-2">
+                                  <div class="col">
+                                      <p class="m-0">Peformance</p>
+                                      <p class="m-0"><strong>65.2%</strong></p>
+                                  </div>
+                                  <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                              </div>
+                              <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i> 5% since last month</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <div class="card shadow mb-3">
+                          <div class="card-header py-3">
+                              <p class="text-primary m-0 fw-bold">Citas próxima cita</p>
+                          </div>
+                          <div class="card-body">
+                              <form>
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="mb-3"><label class="form-label" for="username"><strong>Paciente</strong></label></div><label class="form-label">Argel Alberto Cano Morales</label>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="mb-3"><label class="form-label" for="first_name"><strong>Fecha </strong></label></div><label class="form-label">07/07/2022</label>
+                                      </div>
+                                      <div class="col">
+                                          <div class="mb-3"><label class="form-label" for="last_name"><strong>Hora</strong></label></div><label class="form-label">10:00 PM</label>
+                                      </div>
+                                  </div>
+                                  <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Empezar cita</button></div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="card shadow">
+                          <div class="card-header py-3">
+                              <p class="text-primary m-0 fw-bold">Agregar dieta del paciente</p>
+                          </div>
+                          <div class="card-body">
+                              <form>
+                                  <div class="mb-3"><label class="form-label" for="address"><strong>Subir dieta</strong></label></div><input class="form-control" type="url" />
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="mb-3"><label class="form-label" for="city"><strong>Notas</strong><br /></label></div><textarea class="form-control" style="margin-bottom: 15px;"></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Guardar</button></div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card shadow mb-5">
+          <div class="card-header py-3">
+              <p class="text-primary m-0 fw-bold">Notas</p>
+          </div>
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-md-6">
+                      <form>
+                          <div class="mb-3"><label class="form-label" for="signature"><strong>Notas</strong><br /></label><textarea id="signature" class="form-control" rows="4" name="signature"></textarea></div>
+                          <div class="mb-3">
+                              <div class="form-check form-switch"><input id="formCheck-1" class="form-check-input" type="checkbox" /><label class="form-check-label" for="formCheck-1"><strong>Notify me about new replies</strong></label></div>
+                          </div>
+                          <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Guardar </button></div>
+                      </form>
+                  </div>
+                  <div class="col">
+                      <div class="card"></div>
+                      <div class="card">
+                          <div class="card-header">
+                              <ul class="nav nav-tabs card-header-tabs">
+                                  <li class="nav-item"><a class="nav-link active" href="#">Citas</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Progreso</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#">Dietas</a></li>
+                              </ul>
+                          </div>
+                          <div class="card-body">
+                              <h4 class="card-title">Title</h4>
+                              <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">Ver Cliente</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+
+
+    <!--insertes arriba--><!--inserter contenido--><!--inserter contenido-->
+    <!--Comienzo se complemento-->
+    <!--menu-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <img class="w-75 m-auto" src="img/logocuadrado.png" alt="" />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr class="h-color mx-3" />
+      <div class="offcanvas-body">
+        <form class="d-flex mb-3" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <ul class="list-unstyled ps-0">
+          <li>
+            <a
+              href="/index"
+              class="link-dark d-inline-flex text-decoration-none rounded amor"
+              ><i class="bi bi-house-door-fill"></i>Home</a
+            >
+          </li>
+
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#home-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-speedometer2"></i></div>
+              Reportes
+            </button>
+            <div class="collapse" id="home-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/rganancias"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-bank2"></i>
+                    <div class="m-1"></div>
+                    Ganancias</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rcliente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-people-fill"></i>
+                    <div class="m-1"></div>
+                    Clientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/rconsulta"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-clipboard2-pulse-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-inbox-fill"></i></div>
+              Inbox
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-chat-dots-fill"></i>
+                    <div class="m-1"></div>
+                    Mensajes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-rss-fill"></i>
+                    <div class="m-1"></div>
+                    Social feed</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contacto"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-question-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Chat de ayuda</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-clipboard-heart"></i></div>
+              Consultas
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/confirmacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-check-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Confirmacion</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pendiente"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-calendar-week-fill"></i>
+                    <div class="m-1"></div>
+                    Consultas pendientes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Cancelaciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-x-square-fill"></i>
+                    <div class="m-1"></div>
+                    Cancelaciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="DarConsultas"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-megaphone-fill"></i>
+                    <div class="m-1"></div>
+                    Dar Consultas</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea11"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-cart-plus-fill"></i></div>
+              payment
+            </button>
+            <div class="collapse" id="orders-collapsea11">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/MetodoPago"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card-fill"></i>
+                    <div class="m-1"></div>
+                    Metodo de pago</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/CuentaBancario"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-wallet2"></i>
+                    <div class="m-1"></div>
+                    Cuenta bancaria</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/Retirar"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-credit-card"></i>
+                    <div class="m-1"></div>
+                    Retiro de Efectivo</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#orders-collapsea"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-bookmark-heart-fill"></i></div>
+              premium
+            </button>
+            <div class="collapse" id="orders-collapsea">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-basket2"></i>
+                    <div class="m-1"></div>
+                    Promociones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-cart-plus"></i>
+                    <div class="m-1"></div>
+                    Planes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/error404"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-info-circle-fill"></i>
+                    <div class="m-1"></div>
+                    Informacion</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#account-collapse"
+              aria-expanded="false"
+            >
+              <i class="bi bi-chevron-down"></i>
+              <div class="m-1"><i class="bi bi-person-fill"></i></div>
+              Cuenta
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <a
+                    href="/Informacion"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-person-lines-fill"></i>
+                    <div class="m-1"></div>
+                    Perfil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/configuraciones"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-gear-fill"></i>
+                    <div class="m-1"></div>
+                    Configuraciones</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/paginaprincipal"
+                    class="link-dark d-inline-flex text-decoration-none rounded ms-5"
+                    ><i class="bi bi-box-arrow-right"></i>
+                    <div class="m-1"></div>
+                    Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3 text-center"></li>
+          <div class="text-center mb-2">
+            <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+              >Reportar problema</a
+            >
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-warning">
+              <a
+                class="link-dark d-inline-flex text-decoration-none rounded"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Cerrar sesion</a
+              >
+            </button>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!--footer-->
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <div class="col-md-5 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+          >
+          </a>
+          <span class="mb-3 mb-md-0 text-muted"
+            >© 2022 Desarrollado por <strong class="text-dark">Argel Alberto Cano Morales</strong><img src="img/logopersonal.png" height="24" /></span
+          >
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+    <!-- Modal Salir sesion -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">¿Seguro que quieres salir?</div>
+          <div class="modal-footer">
+            <a href="logout"
+              ><button type="button" class="btn btn-secondary">Salir</button></a
+            >
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Reporte -->
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">
+              Reportar problemas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label"
+                  >Correo</label
+                >
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label"
+                  >Drescripcion:</label
+                >
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Terminacion se complemento-->
+
+    <!-- srippt inicio -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/boststrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script finalizo -->
+  </body>
+</html>

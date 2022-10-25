@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+
+    </style>
+    <title>Registro</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="m-auto d-flex"
+        id="logo"
+        src="img/logocuadrado.png"
+        alt=""
+      />
+    </header>
+
+    <header class="p-3 mb-3 border-bottom sticky-lg-top">
+      <div class="">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-end justify-content-lg-start"
+        >
+          <div class="dropdown">
+            <button
+              class="btn btn-write text-dark"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              <i class="bi bi-list logo"></i>
+            </button>
+          </div>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="/paginaprincipal" class="nav-link px-2"
+                ><button class="btn btn-outline-dark sinborde">Home</button></a
+              >
+            </li>
+            <li>
+              <a
+                href="/error"
+                class="nav-link px-2"
+                ><button class="btn btn-outline-dark sinborde">
+                  ¿Quienes somos?
+                </button></a
+              >
+            </li>
+            <li>
+              <a
+                href="/error"
+                class="nav-link px-2"
+                ><button class="btn btn-outline-dark sinborde">
+                  Contactanos
+                </button></a
+              >
+            </li>
+          </ul>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="text-end">
+            <a
+              class="link-dark d-inline-flex text-decoration-none rounded"
+              href="/login"
+              ><button type="button" class="btn btn-outline-dark me-2">
+                Iniciar Sesion
+              </button></a
+            >
+            <a
+              class="link-dark d-inline-flex text-decoration-none rounded"
+              href="/register"
+              ><button type="button" class="btn btn-warning">
+                Registrate
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- contenido -->
+    <div class="container w-50">
+      <div class="row">
+          <div class="col-lg-12 shadow-lg p-3 mb-5">
+  
+            <div class="card border-danger">
+              <div class="card-header bg-danger text-white">Registrarse</div>
+              <div class="card-body text-dark">
+                <form action="/register" method="POST">        
+                  <div class="mb-3">
+                  <div>
+                      <label for="name" class="form-label">Nombre(s)</label>
+                      <input id="name" name="name" type="text" class="form-control" aria-describedby="emailHelp">              
+                  </div>
+                  <!--  -->
+                  <div class="row">
+                  <!--  -->
+                  <div class="mb-1 col">
+                    <label for="apellidopaterno" class="form-label">Apellido Paterno</label>
+                    <input id="apellidopaterno" name="apellidopaterno" type="text" class="form-control">
+                </div>
+                <!--  -->
+                <div class="mb-1 col-6">
+                  <label for="apellidomaterno" class="form-label">Apellido Materno</label>
+                  <input id="apellidomaterno" name="apellidomaterno" type="text" class="form-control">
+              </div>
+              </div>
+              <!--  -->
+              <div class="mb-1">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input id="telefono" name="telefono" type="text" class="form-control">
+              </div>
+              <!--  -->
+                <div class="mb-1">
+                  <label for="direccion" class="form-label">Dirección</label>
+                  <input id="direccion" name="direccion" type="text" class="form-control">
+                </div>
+                  <div class="row">
+                <!--  -->
+                <div class="mb-1 col">
+                  <label for="ciudad" class="form-label">Ciudad</label>
+                  <input id="ciudad" name="ciudad" type="text" class="form-control">
+                </div>
+                <!--  -->
+                <div class="mb-1">
+                  <label for="pais" class="form-label">Pais</label>
+                  <input id="pais" name="pais" type="text" class="form-control">
+                </div>
+                </div>
+                <!--  -->
+                  <div class="mb-1">
+                    <label for="user" class="form-label">Nombre de usuario</label>
+                    <input id="user" name="user" type="text" class="form-control">
+                  </div>
+                  <!--  -->
+                  <div class="mb-1">
+                      <label for="correo" class="form-label">correo</label>
+                      <input id="correo" name="correo" type="email" class="form-control">
+                  </div>
+                  <!--  -->
+                  <div class="mb-1">
+                      <label for="pass" class="form-label">Password</label>
+                      <input id="pass" name="pass" type="password" class="form-control">
+                  </div>                            
+              </div>
+              <div class="card-footer bg-transparent border-danger">
+                <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+              </div>
+              </form>
+            </div>   
+          </div>   
+          </div>
+      </div>
+  </div>
+
+    <!--footer-->
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <div class="col-md-5 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+          >
+          </a>
+          <span class="mb-3 mb-md-0 text-muted"
+            >© 2022 Desarrollado por <strong class="text-dark">Argel Alberto Cano Morales</strong><img src="img/logopersonal.png" height="24" /></span
+          >
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-muted" href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+
+    <!-- Modal Salir sesion -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cerrar sesion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">¿Seguro que quieres salir?</div>
+          <div class="modal-footer">
+            <a href="logout"
+              ><button type="button" class="btn btn-secondary">Salir</button></a
+            >
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    
+
+
+  </body>
+</html>
+
